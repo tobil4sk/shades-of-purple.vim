@@ -52,8 +52,8 @@ Character: "" # Constant
 Boolean: "" # Constant
 Number: "" # Constant
 Float: "" # Constant
-Identifier: "keywords"
-Function: "keywords" # Identifier
+Identifier: "white"
+Function: "contrast" # Identifier
 Statement: "keywords"
 Conditional: "" # Statement
 Repeat: "" # Statement
