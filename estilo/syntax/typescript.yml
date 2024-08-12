@@ -13,6 +13,7 @@ typescriptIdentifier: 'other'
 typescriptInterfaceName: 'contrast'
 typescriptAliasDeclaration: 'contrast'
 typescriptExport: 'keywords - i'
+typescriptTemplate: 'templates' # String
 
 # tsx
 tsxAttrib: 'contrast - i'
