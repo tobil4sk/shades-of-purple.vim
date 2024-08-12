@@ -77,7 +77,7 @@ javaScriptIdentifier: 'other' # Identifier
 javaScriptLabel: 'other' # Label
 javaScriptException: '' # Exception
 javaScriptMessage: '' # Keyword
-javaScriptGlobal: '' # Keyword
+javaScriptGlobal: 'other' # Keyword
 javaScriptMember: 'contrastLite' # Keyword
 javaScriptDeprecated: '' # Exception
 javaScriptReserved: '' # Keyword
