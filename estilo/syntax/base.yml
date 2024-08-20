@@ -62,7 +62,7 @@ Operator: "keywords ." # Statement
 Keyword: "" # Statement
 Exception: "" # Statement
 PreProc: ""
-Include: "" # PreProc
+Include: "keywords" # PreProc
 Define: "" # PreProc
 Macro: "" # PreProc
 PreCondit: "" # PreProc
