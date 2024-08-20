@@ -1,0 +1,11 @@
+'@variable': '@Identifier'
+# '@variable': 'white'
+'@constructor': "contrast"
+'@type': "contrast"
+'@type.definition': "contrast"
+'@type.builtin': "objectKeys"
+'@variable.member': "contrastLite"
+'@variable.parameter': 'other'
+'@keyword.modifier': 'keywords - i'
+'@module': 'objectKeys'
+'@punctuation.bracket': 'white'
