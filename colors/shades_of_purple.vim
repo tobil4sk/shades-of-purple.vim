@@ -1,14 +1,19 @@
-" ===============================================================
-" shades_of_purple
-" 
-" URL: 
+""
+" shades_of_purple v1.0.0
+"
+
+
 " Author: Alexander Keliris
 " License: MIT
-" Last Change: 2020/11/08 11:37
-" ===============================================================
+""
 
 set background=dark
-hi clear
+if has('nvim')
+  source $VIMRUNTIME/colors/vim.lua
+else
+  hi clear
+endif
+
 if exists("syntax_on")
   syntax reset
 endif
@@ -25,8 +30,8 @@ let Bold = ""
 if exists('g:shades_of_purple_bold')
   let Bold = "bold"
 endif
-
 let g:shades_of_purple_bold = get(g:, 'shades_of_purple_bold', 0)
+
 hi ColorColumn guifg=NONE ctermfg=NONE guibg=#1E1E3F ctermbg=234 gui=NONE cterm=NONE
 hi Cursor guifg=NONE ctermfg=NONE guibg=#FAD000 ctermbg=220 gui=NONE cterm=NONE
 hi CursorColumn guifg=NONE ctermfg=NONE guibg=#1E1E3F ctermbg=234 gui=NONE cterm=NONE
@@ -58,16 +63,17 @@ hi Title guifg=#9EFFFF ctermfg=159 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Visual guifg=NONE ctermfg=NONE guibg=#7d44b2 ctermbg=97 gui=NONE cterm=NONE
 hi WarningMsg guifg=#FAD000 ctermfg=220 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi WildMenu guifg=NONE ctermfg=NONE guibg=#1E1E3F ctermbg=234 gui=NONE cterm=NONE
-hi Comment guifg=#B362FF ctermfg=135 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Comment guifg=#B362FF ctermfg=135 guibg=NONE ctermbg=NONE gui=Italic cterm=Italic
 hi Constant guifg=#FF628C ctermfg=204 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi String guifg=#A5FF90 ctermfg=156 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi Identifier guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi Function guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi Conditional guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Identifier guifg=#E1EFFF ctermfg=195 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Function guifg=#FAD000 ctermfg=220 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Statement guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Operator guifg=#FF9D00 ctermfg=214 gui=NONE cterm=NONE
-hi Type guifg=#80FFBB ctermfg=121 gui=NONE cterm=NONE
-hi StorageClass guifg=#FF9D00 ctermfg=214 gui=NONE cterm=NONE
-hi Structure guifg=#FFEE80 ctermfg=228 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Include guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Type guifg=#FAD000 ctermfg=220 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi StorageClass guifg=#FF9D00 ctermfg=214 gui=Italic cterm=Italic
+hi Structure guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Special guifg=#9EFFFF ctermfg=159 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Underlined guifg=#cad7e5 ctermfg=188 guibg=NONE ctermbg=NONE gui=underline cterm=underline
 hi Error guifg=#EC3A37 ctermfg=203 guibg=NONE ctermbg=NONE gui=underline cterm=underline
@@ -89,7 +95,7 @@ hi cssUnitDecorators guifg=#FFEE80 ctermfg=228 guibg=NONE ctermbg=NONE gui=NONE 
 hi jsVariableDef guifg=#9EFFFF ctermfg=159 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi jsStorageClass guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi jsExtendsKeyword guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi jsTemplateString guifg=#75e44c ctermfg=113 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi jsTemplateString guifg=#3AD900 ctermfg=76 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi jsFuncCall guifg=#FAD000 ctermfg=220 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi jsReturn guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi jsTryCatchBlock guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -130,6 +136,7 @@ hi jsFuncName guifg=#FAD000 ctermfg=220 guibg=NONE ctermbg=NONE gui=NONE cterm=N
 hi jsFunction guifg=#FB94FF ctermfg=213 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi jsGenerator guifg=#9EFFFF ctermfg=159 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi jsStatement guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi javaScriptStringT guifg=#3AD900 ctermfg=76 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi javaScriptCharacter guifg=#9EFFFF ctermfg=159 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi javaScriptOperator guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi javaScriptType guifg=#80FFBB ctermfg=121 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -141,7 +148,7 @@ hi javaScriptBoolean guifg=#FF628C ctermfg=204 guibg=NONE ctermbg=NONE gui=NONE 
 hi javaScriptRegexpString guifg=#E1EFFF ctermfg=195 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi javaScriptIdentifier guifg=#9EFFFF ctermfg=159 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi javaScriptLabel guifg=#9EFFFF ctermfg=159 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi javaScriptException guifg=#EC3A37 ctermfg=203 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi javaScriptGlobal guifg=#9EFFFF ctermfg=159 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi javaScriptMember guifg=#FFEE80 ctermfg=228 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi xmlAttrib guifg=#FAD000 ctermfg=220 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi xmlEndTag guifg=#80FFBB ctermfg=121 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
@@ -167,34 +174,29 @@ hi link htmlH3 htmlH1
 hi htmlH4 guifg=#FAD000 ctermfg=220 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi link htmlH5 htmlH4
 hi link htmlH6 htmlH4
+hi link @variable Identifier
+hi @constructor guifg=#FAD000 ctermfg=220 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi @type guifg=#FAD000 ctermfg=220 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi @type.definition guifg=#FAD000 ctermfg=220 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi @type.builtin guifg=#80FFBB ctermfg=121 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi @variable.member guifg=#FFEE80 ctermfg=228 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi @variable.parameter guifg=#9EFFFF ctermfg=159 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi @keyword.modifier guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=Italic cterm=Italic
+hi @module guifg=#80FFBB ctermfg=121 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi @punctuation.bracket guifg=#E1EFFF ctermfg=195 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi tsExportDefault guifg=#FAD000 ctermfg=220 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi tsFuncArgs guifg=#9EFFFF ctermfg=159 guibg=NONE ctermbg=NONE gui=Italic cterm=Italic
-hi typescriptParameters guifg=#9EFFFF ctermfg=159 guibg=NONE ctermbg=NONE gui=Italic cterm=Italic
 hi tsThis guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=Italic cterm=Italic
+hi typescriptIdentifier guifg=#FB94FF ctermfg=213 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi typescriptExport guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=Italic cterm=Italic
+hi typescriptTemplate guifg=#3AD900 ctermfg=76 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi typescriptProp guifg=#FFEE80 ctermfg=228 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi typescriptPredefinedType guifg=#80FFBB ctermfg=121 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi typescriptPrototype guifg=#d2ffc7 ctermfg=194 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi typescriptCall guifg=#9EFFFF ctermfg=159 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi tsxAttrib guifg=#FAD000 ctermfg=220 guibg=NONE ctermbg=NONE gui=Italic cterm=Italic
-hi tsxComment guifg=#B362FF ctermfg=135 guibg=NONE ctermbg=NONE gui=Italic cterm=Italic
-hi typescriptLineComment guifg=#B362FF ctermfg=135 guibg=NONE ctermbg=NONE gui=Italic cterm=Italic
 hi tsxTagName guifg=#9EFFFF ctermfg=159 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi tsxTag guifg=#E1EFFF ctermfg=195 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi tsxCloseTag guifg=#E1EFFF ctermfg=195 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi tsxCloseString guifg=#9EFFFF ctermfg=159 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi typescriptStorageClass guifg=#FAD000 ctermfg=220 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi typescriptIdentifier guifg=#9EFFFF ctermfg=159 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi typescriptInterfaceName guifg=#FAD000 ctermfg=220 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi typescriptAliasDeclaration guifg=#FAD000 ctermfg=220 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi typescriptInterfaceKeyword guifg=#FAEFA5 ctermfg=229 guibg=NONE ctermbg=NONE gui=Italic cterm=Italic
-hi typescriptAliasKeyword guifg=#FAEFA5 ctermfg=229 guibg=NONE ctermbg=NONE gui=Italic cterm=Italic
-hi typescriptExport guifg=#FF9D00 ctermfg=214 guibg=NONE ctermbg=NONE gui=Italic cterm=Italic
 
-if exists('*term_setansicolors')
-  let g:terminal_ansi_colors = repeat([0], 16)
-
-endif
-
-if has('nvim')
-endif
-
-" ===================================
-" Generated by Estilo 1.5.0
-" https://github.com/jacoborus/estilo
-" ===================================
