@@ -1,20 +1,13 @@
+# Typescript: amadeus/vim-typescript
 tsExportDefault: 'contrast'
 tsFuncArgs: 'other - i'
-typescriptParameters: 'other - i'
 tsThis: 'keywords - i'
+
+# Builtin styles
+
+# tsx
 tsxAttrib: 'contrast - i'
-tsxComment: 'comment - i'
-typescriptLineComment: 'comment - i'
 tsxTagName: 'other'
 tsxTag: 'white'
 tsxCloseTag: 'white'
 tsxCloseString: 'other'
-typescriptReserved: ''
-typescriptStorageClass: 'contrast'
-typescriptIdentifier: 'other'
-typescriptInterfaceName: 'contrast'
-typescriptAliasDeclaration: 'contrast'
-typescriptInterfaceKeyword: 'contrastLiteII - i'
-typescriptAliasKeyword: 'contrastLiteII - i'
-typescriptExport: 'keywords - i'
-typescriptTemplate: 'templates'
