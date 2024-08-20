@@ -68,7 +68,7 @@ Macro: "" # PreProc
 PreCondit: "" # PreProc
 Type: "objectKeys ."
 StorageClass: "keywords ." # Type
-Structure: "contrastLite" # Type
+Structure: "keywords" # Type
 Typedef: "" # Type
 Special: "other"
 SpecialChar: "" # Special
