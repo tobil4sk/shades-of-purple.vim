@@ -66,7 +66,7 @@ Include: "keywords" # PreProc
 Define: "" # PreProc
 Macro: "" # PreProc
 PreCondit: "" # PreProc
-Type: "objectKeys ."
+Type: "contrast"
 StorageClass: "keywords ." # Type
 Structure: "keywords" # Type
 Typedef: "" # Type
