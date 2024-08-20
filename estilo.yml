@@ -8,6 +8,7 @@ colorschemes:
   - name: shades_of_purple
     background: 'dark'
     palette: shades_of_purple
+    neovim_legacy_compat: true
 airline:
   - name: shades_of_purple 
     palette: shades_of_purple
