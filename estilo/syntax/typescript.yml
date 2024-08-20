@@ -4,6 +4,32 @@ tsFuncArgs: 'other - i'
 tsThis: 'keywords - i'
 
 # Builtin styles
+typescriptIdentifier: 'definitions' # Structure
+typescriptExport: 'keywords - i' # Keyword
+typescriptTemplate: 'templates' # String
+typescriptProp: 'contrastLite'
+typescriptPredefinedType: 'objectKeys' # Type
+typescriptPrototype: 'stringsLite'
+typescriptCall: 'other'
+
+# NEW: hm, this also affects await, not just async...
+# typescriptAsyncFuncKeyword: 'keywords - i'
+
+# unneeded
+# typescriptReserved: '' # Error
+
+# remove depending on old neovim support:
+# typescriptAliasDeclaration: 'contrast' # Identifier
+# Function is now contrast anyway so we can remove this
+# typescriptInterfaceName: 'contrast' # Function
+
+# not in built in typescript syntax:
+# typescriptParameters: 'other - i'
+# typescriptStorageClass: 'contrast'
+
+# just wrong (comparing to vscode)
+# typescriptInterfaceKeyword: 'contrastLiteII - i' # Keyword
+# typescriptAliasKeyword: 'contrastLiteII - i' # Keyword
 
 # tsx
 tsxAttrib: 'contrast - i'
