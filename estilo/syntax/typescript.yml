@@ -12,8 +12,6 @@ typescriptReserved: ''
 typescriptIdentifier: 'other'
 typescriptInterfaceName: 'contrast'
 typescriptAliasDeclaration: 'contrast'
-typescriptInterfaceKeyword: 'contrastLiteII - i'
-typescriptAliasKeyword: 'contrastLiteII - i'
 typescriptExport: 'keywords - i'
 
 # tsx
