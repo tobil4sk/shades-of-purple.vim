@@ -10,7 +10,17 @@ typescriptTemplate: 'templates' # String
 typescriptProp: 'contrastLite'
 typescriptPredefinedType: 'objectKeys' # Type
 typescriptPrototype: 'stringsLite'
-typescriptCall: 'other'
+
+
+
+
+# to think about:
+# typescriptCall: 'other'
+
+# new groups from my changes to yats.vim
+typescriptParameter: 'other'
+
+
 
 # NEW: hm, this also affects await, not just async...
 # typescriptAsyncFuncKeyword: 'keywords - i'
